@@ -1,4 +1,5 @@
 <?php
+include "Template/header.php";
 //On redémarre immédiatement la section pour avoir accès aux informations
 session_start();
 //Si aucun utilisateur est enregistré en session on renvoi à l'acceuil
@@ -6,8 +7,6 @@ if(!isset($_SESSION["user"])) {
   header("Location: index.php");
   exit;
 }
-
-include "Template/header.php";
 
 //Si une confirmation de succès pour un retrait de produit
 if(isset($_GET["success"])) {
